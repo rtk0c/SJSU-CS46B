@@ -1,0 +1,8 @@
+.local/
+.idea/
+.vscode/
+out/
+bin/
+*.docx
+*.pdf
+*.exe
