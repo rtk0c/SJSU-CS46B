@@ -1,0 +1,21 @@
+
+QUESTION 5 (20 points):
+
+The starter files MyInteger.java represents a sequence of random integers. 
+
+Complete methods marked with xxx  as explained in the comments.
+  	* getSorted() 
+		returns an ArrayList of integers in a sorted order defined below. 
+		The 1st part contains the non-negative integers in the ascending order.
+		The 2nd part contains the negative ones in the ascending order.
+  	* printAll()
+		Integers must be printed out in the order defined in the getSorted .	
+		Change MyInteger to be iterable so that the printAll method compiles and executes correctly. 
+	* Don’t change printAll. 
+
+
+------------- expected program outputs ------------- 
+My numbers: 0, 1, 2, 3, 4, 5, -5, -4, -3, -2, -1, 
+My numbers: 0, 1, 2, 3, 4, 5, -5, -4, -3, -2, -1, 
+My numbers: 0, 1, 2, 3, 4, 5, -5, -4, -3, -2, -1, 
+

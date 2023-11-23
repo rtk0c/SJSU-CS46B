@@ -1,0 +1,73 @@
+QUESTION 2 (15 points):
+
+* In package mt2, 
+	* create a class called FastaRec, which represents a fasta record. 
+
+* As you saw in Homework 4, a fasta record has 2 lines: 
+	* a defline (which always begins with '>'), and 
+	* a sequence (which may only contain upper-case A, C, G, or T). 
+
+* The FastaRec constructor should have 2 args: 
+	* the defline and 
+	* the sequence. 
+
+* Two fasta records are deeply equal if they have the same define and sequence.
+* The ctor should throw InvalidFastaException with a useful message if either arg is not valid. 
+
+* InvalidFastaException must extend Exception (not RuntimeException).
+
+* Create a class called MainFasta which contains a method findLongFastaRecords(File f).
+    * The method should return HashSet<FastaRec> - 
+		containing all the valid records in the file where the record length is >13.
+    * The method should return null if any of its code causes IOException to be thrown.
+    * The method may not declare that it throws any exceptions.
+
+TESTing: 
+	* The following fasta files are given for checking your code. 
+		* fa_good.txt, fa_bad>txt, fa_ok.txt
+		* The fasta files should be placed in a directory name "data".
+		* Your code may be tested with more fasta files.
+	* In MainFasta, write a main method that calls findLongFastaRecords, with your file as its arg. 
+	* Verify that the method behaves as you expect.
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++       Grading Scheme                                    +
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+* (15%) Your grade is Mainly proportional to 
+	* the correctness of the program output for the 
+		* provided test cases.
+		* extra test cases that are not provided.
+		* (It is recommended to design your own test cases to 
+			ensure the robusness of your codes.)
+	* the correctness of the implementation of the requirements listed above. 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++       Expected Program Output                           +
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Reading data/fa_good.txt ...
+
+>Record2
+ACGTATTCGACGACTCGTACGTACGT
+>Record1
+ACGTACGTACGTACGTACGT
+>Record7
+GTACTACGTACGTTGGACTAGTACGTACG
+---------------------------
+
+
+Reading data/fa_bad.txt ...
+
+mt2.InvalidFastaException: Defline should being with a '>'
+---------------------------
+
+
+Reading data/fa_ok.txt ...
+
+>Record1
+CGTACGTTTTTTCC
+---------------------------
+
+

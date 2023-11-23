@@ -1,0 +1,48 @@
+QUESTION 1 (15 points):
+
+Create class Ship with 3 variables:
+  long price
+  String identity
+  double length
+
+* In package mt2, create class Fleet which aggregates (collects) instances of Ship. 
+* All instances in a Fleet should be unique according to deep-equals. 
+	* That is, if a and b are both in a Fleet, then a.equals(b) must always be false. 
+* Your Fleet should provide the following methods.
+	* If any of the methods is provided by a superclass, you don't have to write the method if you don't want to.
+
+  	* public boolean add(Ship x) - 
+		If this Fleet contains anything that is deep-equal to x, returns false.
+    	Otherwise adds x to this Fleet and returns true.
+
+  	* public boolean contains(Ship x) - 
+		If this Fleet contains anything that is deep-equal to x, returns true.
+    	Otherwise returns false.
+
+  	* public ArrayList<Ship> toSortedList() - 
+		Returns an ArrayList containing all Ship instances in the Fleet, in sorted order. 
+		Sorting should first consider price, then identity, then length. 
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++       Grading Scheme                                    +
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+* (15%) Your grade is Mainly proportional to 
+	* the correctness of the program output for the 
+		* provided test cases.
+		* extra test cases that are not provided.
+		* (It is recommended to design your own test cases to 
+			ensure the robusness of your codes.)
+	* the correctness of the implementation of the requirements listed above. 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++       Expected Program Output                           +
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+[1A7.0, 1A8.0, 1B7.0, 1B8.0, 2A7.0, 2A8.0, 2B7.0, 2B8.0]
+[1A7.0, 1A8.0, 1B7.0, 1B8.0, 2A7.0, 2A8.0, 2B7.0, 2B8.0]
+[1A7.0, 1A8.0, 1B7.0, 1B8.0, 2A7.0, 2A8.0, 2B7.0, 2B8.0]
+[1A7.0, 1A8.0, 1B7.0, 1B8.0, 2A7.0, 2A8.0, 2B7.0, 2B8.0]
+[1A7.0, 1A8.0, 1B7.0, 1B8.0, 2A7.0, 2A8.0, 2B7.0, 2B8.0]

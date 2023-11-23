@@ -23,12 +23,17 @@
 hs_err_pid*
 replay_pid*
 
+# rtk0c: Eclipse excludes
+.settings/
+.metadata
+
 # rtk0c: extra excludes
 .local/
 .idea/
 .vscode/
 out/
 bin/
+tmp/
 *.docx
 *.pdf
 *.exe

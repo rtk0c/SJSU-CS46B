@@ -1,0 +1,112 @@
+QUESTION 3 (20 points):
+
+In package mt2, create classes LinkedListNode<T> and GenericLinkedList<T> to implement a generic linked list. 
+
+The node should have a variable of type T to hold its data. 
+
+It should provide the following methods:
+  * replicateHead() - 
+	Creates a node with data identical to the head of the list. 
+	Inserts the new node either just before or just after the head of the list.
+	Does nothing if the list is empty.
+
+  * replicateTail() - 
+	Creates a node with data identical to the tail of the list. 
+	Inserts the new node either just before or just after the tail of the list.
+	Does nothing if the list is empty.
+
+  * find(T findThis1, T findThis2, T findThis3) - 
+	Returns a node where:
+      * The data of the returned node is deep-equal to findThis1.
+      * The data of the node after the returned node is deep-equal to findThis2.
+      * The data of the node after the node after the returned node is 
+		deep-equal to findThis3
+      * If no nodes meeting these conditions are found, find should return null.
+
+  * checkHeadTail() - 
+	return true if head and tail are either both null or both non-null pointers.
+	return false otherwise.
+
+  * checkLoop() - 
+	return true if there does NOT exist a loop.
+	return false otherwise.
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++       Grading Scheme                                    +
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+* (20%) Your grade is Mainly proportional to 
+	* the correctness of the program output for the 
+		* provided test cases.
+		* extra test cases that are not provided.
+		* (It is recommended to design your own test cases to 
+			ensure the robusness of your codes.)
+	* the correctness of the implementation of the requirements listed above. 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++       Expected Program Output                           +
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+testing toString():
+
+
+testing replicateHead() and replicateTail()
+Empty linked list
+
+testing replicateHead() and replicateTail()
+Empty linked list
+
+
+testing find(d,b,a,):
+
+
+find(d,b,a) =  null
+find(b,a,a) =  null
+find(a,a,a) =  null
+find(a,b,c) =  null
+-----------------------------------
+
+
+testing toString():
+b->a
+
+testing replicateHead() and replicateTail()
+b->b->a->a
+testing replicateHead() and replicateTail()
+b->b->b->a->a->a
+
+testing find(d,b,a,):
+b->b->b->a->a->a
+
+find(d,b,a) =  null
+find(b,a,a) =  b
+find(a,a,a) =  a
+find(a,b,c) =  null
+-----------------------------------
+
+
+testing toString():
+c->d->b->b->b->a->a->a
+
+testing replicateHead() and replicateTail()
+c->c->d->b->b->b->a->a->a->a
+testing replicateHead() and replicateTail()
+c->c->c->d->b->b->b->a->a->a->a->a
+
+testing find(d,b,a,):
+c->c->c->d->b->b->b->a->a->a->a->a
+
+find(d,b,a) =  null
+find(b,a,a) =  b
+find(a,a,a) =  a
+find(a,b,c) =  null
+-----------------------------------
+
+Create an invalid linked list with a loop.
+
+The linked list has a loop!!!
+
+Create a linked list with invalid head .
+
+The linked list is INVALID!!!

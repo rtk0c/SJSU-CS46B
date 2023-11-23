@@ -1,0 +1,11 @@
+
+QUESTION 4 (20 points)
+
+Complete the starter class Tree by finishing the method countLeafs, which should return the number of leaf nodes in the tree.
+
+// Expected Program Outputs
+
+4
+1
+2
+3
